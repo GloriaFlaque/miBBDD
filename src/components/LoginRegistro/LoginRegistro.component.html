@@ -1,9 +1,9 @@
 
 <section class="login-registro">
   
-    <div class="loginregisterclass" v-show="!this.props_blIsLoggedIn">
+    <div class="loginregisterclass" v-show="this.props_blIsLoggedIn">
     <div class="imgcontainer">
-      <img src="../../assets/logo.png" alt="Avatar" class="avatar">
+      <img src="https://78.media.tumblr.com/8d2f03f08c0b4e5471329a2c4dfab706/tumblr_opt0ryXdH31rw0h9uo1_500.gif" alt="Avatar" class="avatar">
     </div>
   
     <div class="panellogin" v-if=blLoginVisible >
@@ -15,6 +15,8 @@
   
       <button v-on:click="btnLogin">Login</button>
       <button v-on:click="btnRegistrar1">Registrar</button>
+      <button v-on:click="btnRegistrarFacebook">FaceBook</button>
+      <button v-on:click="btnRegistrarGoogle">Google</button>
       <label>
         <input type="checkbox" checked="checked"> Remember me
       </label>
@@ -31,7 +33,7 @@
      
     </div>
   </div>
-  <div class="logged" v-show="this.props_blIsLoggedIn">
+  <div class="logged" v-show="!this.props_blIsLoggedIn">
       <button v-on:click="logout">logout</button>
   </div>
     <!--div class="container" style="background-color:#f1f1f1">
