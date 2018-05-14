@@ -17,6 +17,7 @@ export default {
     }
    // sTitulo:"Login!!!"
   },
+  
   created: function(){
     firebase.auth().onAuthStateChanged((user) => {
       this.props_objuser = user
